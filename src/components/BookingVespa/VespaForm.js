@@ -4,7 +4,7 @@ import { createNewVespa, fetchVespas } from '../../redux/slices/vespaSlice';
 
 const VespaForm = () => {
   const dispatch = useDispatch();
-  const { vespas } = useSelector(state => state.cars);
+  const { vespas } = useSelector((state) => state.cars);
   const [vespaData, setVespaData] = useState({
     name: '',
     description: '',
@@ -14,10 +14,10 @@ const VespaForm = () => {
   });
   const [message, setMessage] = useState('');
 
-  const handleCreateNewCar = async e => {
+  const handleCreateNewCar = async (e) => {
     e.preventDefault();
 
-    if (Object.values(vespaData).some(value => value === '')) {
+    if (Object.values(vespaData).some((value) => value === '')) {
       setMessage('Please fill out all fields');
       setTimeout(() => {
         setMessage('');
@@ -44,9 +44,9 @@ const VespaForm = () => {
     }
   };
 
-  const handleInputChange = e => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setVespaData(prevState => ({
+    setVespaData((prevState) => ({
       ...prevState,
       [name]: value,
     }));

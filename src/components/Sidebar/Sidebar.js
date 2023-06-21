@@ -1,10 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
+import {
+  BsTwitter, ImFacebook, TfiGoogle, FaPinterestP,
+} from 'react-icons/all';
 import Wrapper from '../../assets/Wrappers/BigSidebar';
 import NavLinks from '../Navlinks/NavLinks';
 import Logo from '../../assets/img_logo.jpg';
-import { BsTwitter, ImFacebook, TfiGoogle, FaPinterestP } from 'react-icons/all';
 import { logoutUser } from '../../redux/slices/userSlice';
 
 const Sidebar = () => {
