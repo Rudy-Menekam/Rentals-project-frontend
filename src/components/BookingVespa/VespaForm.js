@@ -110,7 +110,8 @@
 //         </div>
 //       </form>
 //       {message && (
-//         <p className={`mt-2 alert ${message.includes('success') ? 'alert-success' : 'alert-danger'} text-center`}>
+//         <p className={`mt-2 alert ${message.includes('success') ?
+// 'alert-success' : 'alert-danger'} text-center`}>
 //           {message}
 //         </p>
 //       )}
