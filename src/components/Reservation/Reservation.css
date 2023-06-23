@@ -1,0 +1,44 @@
+.header-book {
+    display: flex;
+    justify-content: center;
+}
+
+.select-container {
+    justify-content: center;
+    display: flex;
+    gap: 22px;
+    margin: 23px;
+}
+
+.select-car {
+    padding: 10px;
+    padding-left: 10px;
+    width: 200px;
+}
+
+.select-container input{
+    padding: 10px;
+}
+
+button {
+    padding: 16px;
+    width: 20%;
+    font-size: 14px;
+    background-color:rgb(109, 2, 2);
+    border: none;
+    color: white;
+}
+
+.wrapper-reservation {
+    background-image: url(https://images.piaggio.com/vespa/vehicles/nvh2000u04/nvh2r7uu04/nvh2r7uu04-01-s.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.bookForm {
+    background: hsl(0deg 0% 0% / 44%);
+    padding: 36px;
+    margin: auto;
+    width: 36%;
+}
