@@ -6,6 +6,7 @@ import {
   getUserFromLocalStorage,
   removeUserFromLocalStorage,
 } from '../../helpers/LocalStorage';
+import 'react-toastify/dist/ReactToastify.css';
 
 const initialState = {
   isLoading: false,
@@ -20,6 +21,7 @@ const registerUser = createAsyncThunk('user/registerUser', async ({ username, pa
         password,
       },
     });
+
     return resp.data;
   } catch (error) {
     throw new Error(error.response.data);
