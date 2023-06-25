@@ -22,19 +22,23 @@ p {
 .member-btn {
   background: transparent;
   border: transparent;
-  color: blue;
+  color: #77a799;
   cursor: pointer;
   letter-spacing: 1px;
+  font-size: 600;
+}
+
+.member-btn:hover {
+  text-decoration: underline;
 }
 
 .form {
   width: 90vw;
   max-width: 600px;
-  border-top: 5px solid #7375f0;
+  border-top: 5px solid #77a799;
   background: #fff;
   border-radius: 0.25rem;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   padding: 2rem 2.5rem;
   margin: 3rem auto;
@@ -42,8 +46,7 @@ p {
 }
 
 .form:hover {
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
@@ -81,13 +84,12 @@ p {
 .btn {
   cursor: pointer;
   color: #fff;
-  background: #7375f0;
+  background: #77a799;
   border: transparent;
   border-radius: 0.25rem;
   letter-spacing: 1px;
   padding: 0.375rem 0.75rem;
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   text-transform: capitalize;
   display: inline-block;
