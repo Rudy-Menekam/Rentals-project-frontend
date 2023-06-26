@@ -6,9 +6,9 @@ import { BsTwitter } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
 import { TfiGoogle } from 'react-icons/tfi';
 import { FaPinterestP } from 'react-icons/fa';
-import Logo from '../../assets/logo.png';
+// import Logo from './assets/logo.png';
 import NavLinks from '../Navlinks/NavLinks';
-import Wrapper from '../../assets/Wrappers/BigSidebar';
+// import Wrapper from '../../assets/Wrappers/BigSidebar';
 import { logoutUser } from '../../redux/slices/userSlice';
 
 const BigSidebar = () => {
@@ -21,11 +21,11 @@ const BigSidebar = () => {
     toast.success('Logout Successful!');
   };
   return (
-    <Wrapper>
+    <>
       <div className="show-sidebar">
         <div className="content">
           <header>
-            <img src={Logo} alt="logo" />
+            {/* <img src={Logo} alt="logo" /> */}
           </header>
           <NavLinks />
           <button
@@ -46,7 +46,7 @@ const BigSidebar = () => {
         </div>
         <div className="text-black">@2023 VESPA RENTAL</div>
       </div>
-    </Wrapper>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import LoginPage from './Pages/LoginPage';
 import store from './redux/store/store';
 import Reservation from './components/Reservation/Reservation';
+import MyReservations from './components/Reservation/MyReservations';
 
 function App() {
   return (
@@ -18,6 +19,13 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/bookvespa" element={<Reservation />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
+      <Provider store={store}>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/reservations" element={<MyReservations />} />
           </Routes>
         </BrowserRouter>
       </Provider>

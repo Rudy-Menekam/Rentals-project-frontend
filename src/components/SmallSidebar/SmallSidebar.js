@@ -1,15 +1,9 @@
-/* eslint-disable */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { FaTimes, FaPinterestP } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { toast } from 'react-toastify';
-import { BsTwitter } from 'react-icons/bs';
-import { ImFacebook } from 'react-icons/im';
-import { TfiGoogle } from 'react-icons/tfi';
-import Wrapper from '../../assets/Wrappers/SmallSidebar';
 import NavLinks from '../Navlinks/NavLinks';
-import Logo from '../../assets/logo.png';
 import { logoutUser } from '../../redux/slices/userSlice';
 
 const SmallSidebar = () => {
@@ -36,7 +30,7 @@ const SmallSidebar = () => {
   };
 
   return (
-    <Wrapper>
+    <>
       <button
         type="button"
         className="toggle-btn"
@@ -46,11 +40,11 @@ const SmallSidebar = () => {
       </button>
       <div className={`sidebar-container ${showSidebar ? 'show-sidebar' : ''}`}>
         <div className="content">
-          <button className="close-btn" onClick={handleCloseSidebar}>
+          <button type="button" className="close-btn" onClick={handleCloseSidebar}>
             <FaTimes />
           </button>
           <header>
-            <img src={Logo} alt="logo" className="logo" />
+            {/* <img src={} alt="logo" className="logo" /> */}
           </header>
           <NavLinks onClick={handleLinkClick} />
           <button
@@ -62,7 +56,7 @@ const SmallSidebar = () => {
           </button>
         </div>
       </div>
-    </Wrapper>
+    </>
   );
 };
 
