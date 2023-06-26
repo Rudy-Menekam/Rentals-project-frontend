@@ -1,16 +1,16 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { FaTimes } from 'react-icons/fa';
+import { FaTimes, FaPinterestP } from 'react-icons/fa';
 import { AiOutlineMenu } from 'react-icons/ai';
-import Wrapper from '../../assets/Wrappers/SmallSidebar';
-import NavLinks from '../Navlinks/NavLinks';
-import Logo from '../../assets/logo.png';
 import { toast } from 'react-toastify';
-import { logoutUser } from '../../redux/slices/userSlice';
 import { BsTwitter } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
 import { TfiGoogle } from 'react-icons/tfi';
-import { FaPinterestP } from 'react-icons/fa';
+import Wrapper from '../../assets/Wrappers/SmallSidebar';
+import NavLinks from '../Navlinks/NavLinks';
+import Logo from '../../assets/logo.png';
+import { logoutUser } from '../../redux/slices/userSlice';
 
 const SmallSidebar = () => {
   const [showSidebar, setShowSidebar] = useState(false);

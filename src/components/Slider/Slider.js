@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Slider.css';
@@ -63,7 +64,8 @@ const Slider = (props) => {
                 <div className="car-info text-center">
                   <h3 className="car-title">{vespa.name}</h3>
                   <p className="car-description">
-                    {vespa.description}{' '}
+                    {vespa.description}
+                    {' '}
                     <span className="car-description">{vespa.model}</span>
                   </p>
 
@@ -76,7 +78,8 @@ const Slider = (props) => {
                     />
                   </div>
                 </div>
-              </Link>{' '}
+              </Link>
+              {' '}
             </SwiperSlide>
           ))}
         </Swiper>

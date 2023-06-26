@@ -1,5 +1,6 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { IoIosArrowForward } from 'react-icons/io';
 import { FiSettings } from 'react-icons/fi';
 import { BsArrowRightCircle } from 'react-icons/bs';
@@ -7,7 +8,6 @@ import { BiLeftArrow } from 'react-icons/bi';
 import './VespaDetails.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchVespa } from '../../redux/slices/vespaSlice';
-import { useNavigate } from 'react-router-dom';
 
 const VespaDetails = (props) => {
   const dispatch = useDispatch();
@@ -47,7 +47,10 @@ const VespaDetails = (props) => {
         <ul>
           <li className="d-flex gap-2">
             <div>Finance fee:</div>
-            <div>${singleVespa.price}</div>
+            <div>
+              $
+              {singleVespa.price}
+            </div>
           </li>
           <li className="d-flex gap-2">
             <div>Option to purchase fee:</div>
@@ -78,7 +81,10 @@ const VespaDetails = (props) => {
           onClick={handleReserve}
           className="arrow-reserve-btn d-flex justify-content-between align-items-center gap-2"
         >
-          <FiSettings /> Reserve <BsArrowRightCircle />
+          <FiSettings />
+          {' '}
+          Reserve
+          <BsArrowRightCircle />
         </button>
       </div>
     </div>

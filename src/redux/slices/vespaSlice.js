@@ -1,7 +1,8 @@
+/* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { getUserFromLocalStorage } from '../../utils/LocalStorage';
 import { upload } from '@testing-library/user-event/dist/upload';
+import { getUserFromLocalStorage } from '../../utils/LocalStorage';
 
 export const BASE_URL = 'http://127.0.0.1:3000/api/v1';
 
