@@ -1,4 +1,5 @@
 /* eslint-disable */
+import './BigSidebar.css';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
@@ -10,6 +11,7 @@ import Logo from '../../assets/logo.png';
 import NavLinks from '../Navlinks/NavLinks';
 import Wrapper from '../../assets/Wrappers/BigSidebar';
 import { logoutUser } from '../../redux/slices/userSlice';
+
 
 const BigSidebar = () => {
   const dispatch = useDispatch();
@@ -24,8 +26,8 @@ const BigSidebar = () => {
     <Wrapper>
       <div className="show-sidebar">
         <div className="content">
-          <header>
-            <img src={Logo} alt="logo" />
+          <header className='header'>
+            <img className='logo-img' src={Logo} alt="logo" />
           </header>
           <NavLinks />
           <button
