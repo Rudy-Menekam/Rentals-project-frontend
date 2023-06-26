@@ -22,15 +22,19 @@ p {
 .member-btn {
   background: transparent;
   border: transparent;
-  color: blue;
+  color: #77a799;
   cursor: pointer;
   letter-spacing: 1px;
+}
+
+.member-btn:hover {
+  text-decoration: underline;
 }
 
 .form {
   width: 90vw;
   max-width: 600px;
-  border-top: 5px solid #7375f0;
+  border-top: 5px solid #77a799;
   background: #fff;
   border-radius: 0.25rem;
   box-shadow:
@@ -81,7 +85,7 @@ p {
 .btn {
   cursor: pointer;
   color: #fff;
-  background: #7375f0;
+  background: #77a799;
   border: transparent;
   border-radius: 0.25rem;
   letter-spacing: 1px;
