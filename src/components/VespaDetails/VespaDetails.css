@@ -23,7 +23,7 @@
   object-fit: contain;
 }
 
-.car-details-container {
+.vespa-details-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

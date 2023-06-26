@@ -59,14 +59,14 @@ const Slider = (props) => {
             <SwiperSlide key={vespa.id}>
               <Link to={`/detailsPage/${vespa.id}`} className="wrapper">
                 <div className="slide-container">
-                  <img className="car" src={vespa.photo} alt="car" />
+                  <img className="vespa" src={vespa.photo} alt="vespa" />
                 </div>
-                <div className="car-info text-center">
-                  <h3 className="car-title">{vespa.name}</h3>
-                  <p className="car-description">
+                <div className="vespa-info text-center">
+                  <h3 className="vespa-title">{vespa.name}</h3>
+                  <p className="vespa-description">
                     {vespa.description}
                     {' '}
-                    <span className="car-description">{vespa.model}</span>
+                    <span className="vespa-description">{vespa.model}</span>
                   </p>
 
                   <div className="slide-socials">

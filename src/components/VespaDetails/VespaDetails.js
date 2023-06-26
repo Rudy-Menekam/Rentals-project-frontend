@@ -23,7 +23,7 @@ const VespaDetails = (props) => {
   };
 
   return (
-    <div className="car-details-container d-flex w-100">
+    <div className="vespa-details-container d-flex w-100">
       <div className="d-flex flex-column w-100 justify-content-start align-items-center">
         <div className="img-container">
           <img

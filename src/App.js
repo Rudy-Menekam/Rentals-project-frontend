@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LoginPage from './Pages/LoginPage';
 import store from './redux/store/store';
+import Homepage from './Pages/homepage';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LoginPage />} />
+            <Route path="/homepage" element={<Homepage />} />
           </Routes>
         </BrowserRouter>
       </Provider>
