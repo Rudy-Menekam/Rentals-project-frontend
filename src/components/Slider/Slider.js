@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+// import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Slider.css';
 import 'swiper/css';
@@ -13,10 +13,24 @@ import {
 } from 'react-icons/ti';
 import { BsCardChecklist } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchVespas } from '../../redux/slices/vespaSlice';
 
 const Slider = (props) => {
-  const { vespas } = useSelector((state) => state.vespas);
+  const dispatch = useDispatch();
+  const vespas = useSelector((state) => state.vespas.vespas);
+  const loading = useSelector((state) => state.vespas.loading);
+
+  useEffect(() => {
+    dispatch(fetchVespas());
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div style={{ width: '100%', position: 'relative' }}>
       <div className="slider-title text-center">
