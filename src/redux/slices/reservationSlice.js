@@ -15,10 +15,10 @@ export const getReservations = createAsyncThunk('getReservations', async () => {
     reservations[reservation.id] = {
       id: reservation.id,
       city: reservation.city,
-      start_date: reservation.start_date,
+      pick_up_date: reservation.pick_up_date,
       user_id: reservation.user_id,
-      car_id: reservation.car_id,
-      end_date: reservation.end_date,
+      vespa_id: reservation.vespa_id,
+      return_date: reservation.return_date,
       name: reservation.name,
       image: reservation.image,
     };

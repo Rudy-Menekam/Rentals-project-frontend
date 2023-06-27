@@ -31,7 +31,7 @@ button {
 
 .wrapper-reservation {
   background-image: url(https://images.piaggio.com/vespa/vehicles/nvh2000u04/nvh2r7uu04/nvh2r7uu04-01-s.png);
-  height: 100vh;
+  width: 100%;
   background-repeat: no-repeat;
   background-size: contain;
 }
