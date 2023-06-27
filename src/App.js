@@ -9,7 +9,6 @@ import Reservationshistory from './Pages/reservationshistory';
 import Reservation from './components/Reservation/Reservation';
 import MyReservations from './components/Reservation/MyReservations';
 
-
 function App() {
   return (
     <div className="App">

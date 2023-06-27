@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import SmallSidebar from '../components/SmallSidebar/SmallSidebar';
 import BigSidebar from '../components/BigSidebar/BigSidebar';

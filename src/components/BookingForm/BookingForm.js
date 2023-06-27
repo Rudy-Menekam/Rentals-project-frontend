@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { createNewVespa } from '../../redux/slices/vespaSlice';
-import { fetchVespas } from '../../redux/slices/vespaSlice';
+import { useDispatch } from 'react-redux';
+import { createNewVespa, fetchVespas } from '../../redux/slices/vespaSlice';
 
-const BookingForm = (props) => {
+const BookingForm = () => {
   const dispatch = useDispatch();
-  const { vespas } = useSelector((state) => state.vespas);
+  // const { vespas } = useSelector((state) => state.vespas);
   const [vespaData, setVespaData] = useState({
     name: '',
     description: '',
@@ -55,7 +54,7 @@ const BookingForm = (props) => {
     <div className="w-50 container-b-form container">
       <form onSubmit={handleCreateNewVespa}>
         <div className="d-flex flex-column justify-content-center align-items-center">
-          <label className="mb-4 h5 d-flex flex-column">
+          <label className="mb-4 h5 d-flex flex-column" htmlFor="name">
             Name:
             <input
               className="mt-2 add-input"
@@ -65,7 +64,7 @@ const BookingForm = (props) => {
               onChange={handleInputChange}
             />
           </label>
-          <label className="mb-4  h5 d-flex flex-column">
+          <label className="mb-4  h5 d-flex flex-column" htmlFor="description">
             Description:
             <input
               className="mt-2 add-input"
@@ -75,7 +74,7 @@ const BookingForm = (props) => {
               onChange={handleInputChange}
             />
           </label>
-          <label className="mb-4 h5 d-flex flex-column">
+          <label className="mb-4 h5 d-flex flex-column" htmlFor="photo">
             Photo:
             <input
               className="mt-2 add-input"
@@ -85,7 +84,7 @@ const BookingForm = (props) => {
               onChange={handleInputChange}
             />
           </label>
-          <label className="mb-2 h5 d-flex flex-column">
+          <label className="mb-2 h5 d-flex flex-column" htmlFor="price">
             Price:
             <input
               className="mt-2 add-input"
@@ -95,7 +94,7 @@ const BookingForm = (props) => {
               onChange={handleInputChange}
             />
           </label>
-          <label className="mb-2 h5 d-flex flex-column">
+          <label className="mb-2 h5 d-flex flex-column" htmlFor="model">
             Model:
             <input
               className="mt-2 add-input"
