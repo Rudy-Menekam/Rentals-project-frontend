@@ -2,7 +2,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { upload } from '@testing-library/user-event/dist/upload';
-import { getUserFromLocalStorage } from '../../utils/LocalStorage';
+import { getUserFromLocalStorage } from '../../helpers/LocalStorage';
 
 export const BASE_URL = 'http://127.0.0.1:3000/api/v1';
 
@@ -34,10 +34,10 @@ export const deleteVespa = createAsyncThunk(
   'vespas/deleteVespa',
   async (id, { rejectWithValue }) => {
     try {
-      const token = getUserFromLocalStorage();
+      const token = getUserFromLocalStorage().user.token;
       const response = await axios.delete(`${BASE_URL}/vespas/${id}`, {
         headers: {
-          Authorization: `Bearer ${token.token}`,
+          Authorization: `${token}`,
         },
       });
       return response.data;
@@ -51,10 +51,10 @@ export const createNewVespa = createAsyncThunk(
   'vespas/createNewVespa',
   async (vespaData, { rejectWithValue }) => {
     try {
-      const token = getUserFromLocalStorage();
+      const token = getUserFromLocalStorage().user.token;
       const response = await axios.post(`${BASE_URL}/vespas`, vespaData, {
         headers: {
-          Authorization: `Bearer ${token.token}`,
+          Authorization: `${token}`,
         },
       });
       return response.data;
