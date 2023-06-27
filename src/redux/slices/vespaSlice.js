@@ -63,7 +63,6 @@ export const createNewVespa = createAsyncThunk(
     }
   },
 );
-
 export const createReservation = createAsyncThunk(
   'vespas/createReservation',
   async (reservationData, { rejectWithValue }) => {

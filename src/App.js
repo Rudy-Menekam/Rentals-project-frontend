@@ -6,6 +6,9 @@ import Homepage from './Pages/homepage';
 import Detailspage from './Pages/detailspage';
 import Reservationpage from './Pages/reservationpage';
 import Reservationshistory from './Pages/reservationshistory';
+import Reservation from './components/Reservation/Reservation';
+import MyReservations from './components/Reservation/MyReservations';
+
 
 function App() {
   return (
@@ -27,10 +30,11 @@ function App() {
               path="/deleteItem"
               element={<Reservationshistory />}
             />
+            <Route path="/bookride" element={<Reservation />} />
+            <Route path="/reservations" element={<MyReservations />} />
           </Routes>
         </BrowserRouter>
       </Provider>
-
     </div>
   );
 }
