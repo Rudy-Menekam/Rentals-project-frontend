@@ -5,7 +5,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { FiSettings } from 'react-icons/fi';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { BiLeftArrow } from 'react-icons/bi';
-import './VespaDetails.css';
+// import './VespaDetails.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchVespa } from '../../redux/slices/vespaSlice';
 
