@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
-// import './VespaHistory.css';
+import './VespaHistory.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteVespa, removeVespa } from '../../redux/slices/vespaSlice';
 

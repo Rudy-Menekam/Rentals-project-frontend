@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LoginPage from './Pages/LoginPage';
@@ -7,7 +8,8 @@ import Detailspage from './Pages/detailspage';
 import Reservationpage from './Pages/reservationpage';
 import Reservationshistory from './Pages/reservationshistory';
 import Reservation from './components/Reservation/Reservation';
-import MyReservations from './components/Reservation/MyReservations';
+import ProtectedRoute from './Pages/ProtectedRoute';
+// import MyReservations from './components/Reservation/MyReservations';
 
 function App() {
   return (
@@ -16,21 +18,40 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LoginPage />} />
-            <Route path="/homepage" element={<Homepage />} />
+            <Route path="/homepage" element={
+            <ProtectedRoute>
+              <Homepage />
+            </ProtectedRoute> } />
             <Route
               path="/detailsPage/:id"
-              element={<Detailspage />}
+              element={
+              <ProtectedRoute>
+                <Detailspage />
+              </ProtectedRoute>
+            }
             />
             <Route
               path="/addItem"
-              element={<Reservationpage />}
+              element={
+              <ProtectedRoute>
+                <Reservationpage />
+              </ProtectedRoute>
+            }
             />
             <Route
               path="/deleteItem"
-              element={<Reservationshistory />}
+              element={
+              <ProtectedRoute>
+                <Reservationshistory />
+              </ProtectedRoute>
+            }
             />
-            <Route path="/bookride" element={<Reservation />} />
-            <Route path="/reservations" element={<MyReservations />} />
+            <Route path="/bookride" element={
+            <ProtectedRoute>
+              <Reservation />
+            </ProtectedRoute>
+            } />
+            {/* <Route path="/reservations" element={<MyReservations />} /> */}
           </Routes>
         </BrowserRouter>
       </Provider>

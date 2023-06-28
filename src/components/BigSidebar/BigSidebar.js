@@ -45,7 +45,7 @@ const BigSidebar = () => {
           <TfiGoogle fill="black" />
           <FaPinterestP fill="black" />
         </div>
-        <div className="text-black">@2023 WHEELSAWAY</div>
+        <div className="text-black">@2023 Vespa Rental</div>
       </div>
     </Wrapper>
   );

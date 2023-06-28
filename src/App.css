@@ -21,7 +21,7 @@
   }
 
   .background-tint {
-    background-color: #96cf2c; /* Green tint */
+    background-color: #087f9c; 
     background-blend-mode: multiply;
   }
 
@@ -62,7 +62,7 @@
     width: 10vw;
     border-radius: 50px;
     background-color: white;
-    color: green;
+    color: #087f9c;
     padding: 0.5vw;
     border: none;
   }
@@ -74,7 +74,7 @@
     outline-offset: 0.25rem;
     outline: 0.15rem solid rgb(73, 87, 23);
     font-weight: 500;
-    background-color: #96cf2c;
+    background-color: #087f9c;
     color: #fff;
     padding: 0.5vw;
     width: 60%;
@@ -82,7 +82,7 @@
 
   .button-book-now:hover {
     background-color: #fff;
-    color: green;
+    color: #085568;
     transform: scale3d(1.05, 1.05, 1.05);
     transition: all 0.5s ease-in-out;
   }
@@ -91,7 +91,7 @@
     font-size: 5vw;
     width: 25vw;
     border-radius: 50px;
-    background-color: #96cf2c;
+    background-color: #087f9c;
     color: white;
     font-weight: 400;
     padding: 0.5vw;
@@ -122,7 +122,7 @@
     width: 15vw;
     border-radius: 50px;
     background-color: white;
-    color: green;
+    color: #0a5568;
     padding: 0.5vw;
     border: 1px outset #fff;
     outline-offset: 0.25rem;
@@ -135,7 +135,7 @@
     width: 30vw;
     border-radius: 50px;
     background-color: white;
-    color: green;
+    color: #0b657c;
     padding: 0.6vw;
     border: none;
     text-align: center;
@@ -173,7 +173,7 @@
   }
 
   .background-tint {
-    background-color: #96cf2c; /* Green tint */
+    background-color: #087f9c; 
     background-blend-mode: multiply;
   }
 
@@ -215,7 +215,7 @@
     width: 10vw;
     border-radius: 50px;
     background-color: white;
-    color: green;
+    color: #0c6277;
     padding: 0.5vw;
     border: none;
   }
@@ -225,9 +225,9 @@
     border-radius: 50px;
     border: 1px outset #fff;
     outline-offset: 0.25rem;
-    outline: 0.15rem solid rgb(73, 87, 23);
+    outline: 0.15rem solid #1d6679;
     font-weight: 500;
-    background-color: #96cf2c;
+    background-color: #087f9c;
     color: #fff;
     padding: 0.5vw;
     width: 25%;
@@ -235,7 +235,7 @@
 
   .button-book-now:hover {
     background-color: #fff;
-    color: green;
+    color: #0c6277;
     transform: scale3d(1.05, 1.05, 1.05);
     transition: all 0.5s ease-in-out;
   }
@@ -244,7 +244,7 @@
     font-size: 2vw;
     width: 12vw;
     border-radius: 50px;
-    background-color: #96cf2c;
+    background-color: #087f9c;
     color: white;
     font-weight: 400;
     padding: 0.5vw;
@@ -279,7 +279,7 @@
     width: 15vw;
     border-radius: 50px;
     background-color: white;
-    color: green;
+    color: #0a5a6e;
     padding: 0.5vw;
     border: 1px outset #fff;
     outline-offset: 0.25rem;
@@ -292,7 +292,7 @@
     width: 10vw;
     border-radius: 50px;
     background-color: white;
-    color: green;
+    color: #08647a;
     padding: 0.6vw;
     border: none;
     text-align: center;

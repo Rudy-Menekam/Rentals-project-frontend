@@ -59,7 +59,7 @@ const Wrapper = styled.aside`
   }
   .nav-link {
     text-decoration: none;
-    color: #121212;
+    color: #0f323b;
     font-size: 2rem;
     padding: 1rem;
     text-transform: capitalize;
@@ -67,7 +67,7 @@ const Wrapper = styled.aside`
 
   .nav-link:hover,
   .active {
-    color: #96bf01;
+    color: #0f323b;
   }
 
   .logout-btn:active {

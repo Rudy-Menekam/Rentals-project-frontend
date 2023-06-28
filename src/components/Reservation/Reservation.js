@@ -1,9 +1,12 @@
+/* eslint-disable */
 import './Reservation.css';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createReservation } from '../../redux/slices/reservationSlice';
 import DateRange from '../DatePicker/DatePicker';
+import SmallSidebar from '../SmallSidebar/SmallSidebar';
+import BigSidebar from '../BigSidebar/BigSidebar';
 
 const Reservation = () => {
   const navigate = useNavigate();
@@ -70,8 +73,11 @@ const Reservation = () => {
   return (
     <>
       <div className="sliderwrapper">
+      <BigSidebar />
+      <SmallSidebar />
+      <div className="container-bg"> 
         <div className="wrapper-reservation">
-          <div className="container w-50">
+          <div className="container w-50 justify-content-center align-items-center ">
             {fieldError && (
               <p className="error-message alert alert-danger mt-2">
                 Please fill in the following required fields:
@@ -97,11 +103,13 @@ const Reservation = () => {
                 )}
               </p>
             )}
+            <div className="d-flex flex-column gap-2 justify-content-center align-items-center bookForm-cnt">
 
-            <h1 className="header-book">BOOK A Vespa</h1>
-            <hr className="horizontal-line" />
             <div className="bookForm">
-              <div className="d-flex flex-column gap-2 justify-content-center align-items-baseline">
+              <div className="input-from">
+              <h1 className="header-book">Book a Vespa</h1>
+              <hr className="horizontal-line" />
+                <h3 className="header-book">Select Dates</h3>
                 <DateRange
                   selectedStartDate={selectedStartDate}
                   selectedEndDate={selectedEndDate}
@@ -163,8 +171,10 @@ const Reservation = () => {
                   Book Now
                 </button>
               </div>
+              </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
     </>
