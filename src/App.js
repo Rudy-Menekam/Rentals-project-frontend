@@ -19,37 +19,35 @@ function App() {
           <Routes>
             <Route path="/" element={<LoginPage />} />
             <Route path="/homepage" element={
-            <ProtectedRoute>
-              <Homepage />
-            </ProtectedRoute> } />
+              <ProtectedRoute>
+                <Homepage />
+              </ProtectedRoute>} />
             <Route
               path="/detailsPage/:id"
               element={
-              <ProtectedRoute>
-                <Detailspage />
-              </ProtectedRoute>
-            }
+                <ProtectedRoute>
+                  <Detailspage />
+                </ProtectedRoute>
+              }
             />
             <Route
               path="/addItem"
               element={
-              <ProtectedRoute>
-                <Reservationpage />
-              </ProtectedRoute>
-            }
+                <ProtectedRoute>
+                  <Reservationpage />
+                </ProtectedRoute>
+              }
             />
             <Route
               path="/deleteItem"
               element={
-              <ProtectedRoute>
                 <Reservationshistory />
-              </ProtectedRoute>
-            }
+              }
             />
             <Route path="/bookride" element={
-            <ProtectedRoute>
-              <Reservation />
-            </ProtectedRoute>
+              <ProtectedRoute>
+                <Reservation />
+              </ProtectedRoute>
             } />
             {/* <Route path="/reservations" element={<MyReservations />} /> */}
           </Routes>
