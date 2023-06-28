@@ -1,70 +1,202 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  <h3><b>Vespas Rental Frontend</b></h3>
+</div>
+<a name="readme-top"></a>
 
-## Available Scripts
+<!-- TABLE OF CONTENTS -->
 
-In the project directory, you can run:
+# 📗 Table of Contents
 
-### `npm start`
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Vespas Rental Frontend ](#-vespas-rental-frontend-)
+  - [Live Demo](#live-demo)
+  - [Desktop View](#desktop-view)
+  - [Mobile View](#mobile-view)
+  - [Kanban Board](#kanban-board)
+  - [Backend](#backend)
+  - [Contributors](#contributors)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+  - [To get a local copy up and running, follow these steps.](#to-get-a-local-copy-up-and-running-follow-these-steps)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<!-- PROJECT DESCRIPTION -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📖 Vespas Rental Frontend <a name="about-project"></a>
 
-### `npm test`
+> Vespa Rentals Frontend is a React app that serves as a front end to the Vespa Rentals project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live Demo
 
-### `npm run build`
+To see this project's live demo, please click [here]().
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Desktop View
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![screenshot]()
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Mobile View
 
-### `npm run eject`
+![screenshot]()
+## Kanban Board
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To view the Kanban Board we built for this project please click [here](https://github.com/users/Rudy-Menekam/projects/3).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To view the issue with the Kanban Board screenshots please click [here](https://github.com/Rudy-Menekam/Rentals-project-frontend/issues/14).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Api documentation can be found [here]()
 
-## Learn More
+Api live demo can be found [here]()
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributors
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+There were initially 4 contributors to this project, you can see their contact information in the Authors section of this document.
 
-### Code Splitting
+## 🛠 Built With <a name="built-with"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+This app is build with React and Redux.
 
-### Analyzing the Bundle Size
+### Tech Stack <a name="tech-stack"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> <li><a href="https://reactjs.org/">React</a></li>
+> <li><a href="https://redux.js.org/">Redux</a></li>
 
-### Making a Progressive Web App
+### Key Features <a name="key-features"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+> - The login page where the user logs in to the website.
+> - The home page where the user can see a list of vespas and click on any vespa to display the details of that vespa.
+> - The details page is where the user can click on the "Reserve" button to reserve the vespa.
+> - The user can see a list of their reservations.
+> - The user can add a new vespa.
+> - The user can click on the delete button from the naviagtion panel and see a list of all vespas with the vespa name and a "delete" button and then delete a particular vespa.
+> - The deleted vespas are removed from the home page.
 
-### Advanced Configuration
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<!-- GETTING STARTED -->
 
-### Deployment
+## 💻 Getting Started <a name="getting-started"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## To get a local copy up and running, follow these steps.
 
-### `npm run build` fails to minify
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In order to run this project you need:
+
+- Mac or PC
+- Install node.js
+- Use npm as package manager.
+- Understanding of React and Redux
+
+### Setup
+
+- Clone this repository to your desired folder:
+
+```sh
+ git clone https://github.com/Rudy-Menekam/Rentals-project-frontend.git
+```
+
+- Navigate into the cloned folder
+
+```sh
+ cd Rentals-project-frontend
+
+```
+
+### Install
+
+- Install this project with:
+
+```sh
+ npm install
+```
+
+- Start the server
+
+```sh
+ npm start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Marko Kermichiev**
+
+- GitHub: [MarkoKermi](https://github.com/MarkoKermi)
+- Twitter: [@MarkoKerm](https://twitter.com/MarkoKerm)
+- LinkedIn: [Marko Kermichiev](https://www.linkedin.com/in/marko-kermichiev/)
+
+👤 **Yash**
+
+- GitHub: [Yash](https://github.com/yash244466666)
+- LinkedIn: [Yash Solo](https://www.linkedin.com/in/yash-solo)
+- Twitter: [Yash Solo](https://twitter.com/yash_solo000)
+
+👤 **Rudy Menekam**
+
+- GitHub: [@githubhandle](https://github.com/Rudy-Menekam)
+- Twitter: [@twitterhandle](https://twitter.com/MenekamR)
+- LinkedIn: [linkedIn](https://www.linkedin.com/in/menekam-rudy/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Allow users to choose a language for the application**
+- [ ] **Add payment option**
+- [ ] **Some UX improvements: include transitions and/or animations, etc.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Rudy-Menekam/Rentals-project-frontend/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please leave a ⭐️
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- We would like to thank Microverse for providing the reading materials that aided us to during the project development.
+- We would like to give Credit to 🙏 Murat Korkmaz the author of the original Vespa- Responsive Redesign, as required by the Creative Commons License.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
