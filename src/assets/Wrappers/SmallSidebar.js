@@ -67,11 +67,11 @@ const Wrapper = styled.aside`
 
   .nav-link:hover,
   .active {
-    color: #0f323b;
+    color: #2258A2;
   }
 
   .logout-btn:active {
-    color: blue;
+    color: #FF3131;
   }
 
   .footer {
@@ -81,6 +81,9 @@ const Wrapper = styled.aside`
     cursor: pointer;
     padding-left: 1rem;
     font-size: 1.75rem;
+  }
+  .logoutBtn {
+    background-color: #2258A2 !important;
   }
 `;
 export default Wrapper;

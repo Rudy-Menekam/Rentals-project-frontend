@@ -8,11 +8,15 @@
   padding-top: 60px;
 }
 
+.vespaDltBtn {
+  background-color: #2258a2 !important;
+}
+
 .history-card {
   width: fit-content;
   height: 45%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  background-color: rgb(230, 251, 251);
+  background-color: #2257a238;
   padding-top: 20px;
 }
 

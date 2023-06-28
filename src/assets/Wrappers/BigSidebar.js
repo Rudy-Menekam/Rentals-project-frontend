@@ -40,13 +40,13 @@ const Wrapper = styled.aside`
       text-transform: capitalize;
       transition: 0.3s all ease-in-out;
     }
-    .nav-link:hover,
+
     .logout-btn:hover {
-      // color: blue;
+      background-color: #FF3131;
     }
 
     .active {
-      background-color: #0f323b;
+      background-color: #2258A2;
       border-radius: 0.5rem;
       color: #fff;
     }
@@ -67,6 +67,12 @@ const Wrapper = styled.aside`
       justify-content: center;
       gap: 10px;
     }
+  }
+  .logoutBtn {
+    background-color: #2258A2 !important;
+  }
+  .logoutBtn:hover {
+    background-color: #2258A2 !important;
   }
 `;
 export default Wrapper;

@@ -2,7 +2,7 @@
   background-color: transparent;
   width: fit-content;
   border: none;
-  color: #087f9c !important;
+  color: #2258a2 !important;
 }
 
 .img-container {
@@ -32,11 +32,11 @@
 }
 
 .arrow-reserve-btn {
-  background-color: #087f9c;
+  background-color: #2258a2;
   border: none;
   width: fit-content;
   margin-top: 10px;
   padding: 10px 20px;
   border-radius: 100px;
-  color: #fff;
+  color: #a8a8a8;
 }

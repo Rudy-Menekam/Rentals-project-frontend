@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LoginPage from './Pages/LoginPage';
@@ -9,7 +8,6 @@ import Reservationpage from './Pages/reservationpage';
 import Reservationshistory from './Pages/reservationshistory';
 import Reservation from './components/Reservation/Reservation';
 import ProtectedRoute from './Pages/ProtectedRoute';
-// import MyReservations from './components/Reservation/MyReservations';
 
 function App() {
   return (
@@ -18,25 +16,29 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LoginPage />} />
-            <Route path="/homepage" element={
-              <ProtectedRoute>
-                <Homepage />
-              </ProtectedRoute>} />
+            <Route
+              path="/homepage"
+              element={(
+                <ProtectedRoute>
+                  <Homepage />
+                </ProtectedRoute>
+            )}
+            />
             <Route
               path="/detailsPage/:id"
-              element={
+              element={(
                 <ProtectedRoute>
                   <Detailspage />
                 </ProtectedRoute>
-              }
+              )}
             />
             <Route
               path="/addItem"
-              element={
+              element={(
                 <ProtectedRoute>
                   <Reservationpage />
                 </ProtectedRoute>
-              }
+              )}
             />
             <Route
               path="/deleteItem"
@@ -44,12 +46,14 @@ function App() {
                 <Reservationshistory />
               }
             />
-            <Route path="/bookride" element={
-              <ProtectedRoute>
-                <Reservation />
-              </ProtectedRoute>
-            } />
-            {/* <Route path="/reservations" element={<MyReservations />} /> */}
+            <Route
+              path="/bookride"
+              element={(
+                <ProtectedRoute>
+                  <Reservation />
+                </ProtectedRoute>
+            )}
+            />
           </Routes>
         </BrowserRouter>
       </Provider>

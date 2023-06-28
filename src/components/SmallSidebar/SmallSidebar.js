@@ -57,7 +57,7 @@ const SmallSidebar = () => {
           <button
             type="button"
             onClick={handleLogout}
-            className="btn btn-outline-danger px-3 w-50 mt-3"
+            className="btn btn-outline-danger px-3 w-50 mt-3 logoutBtn"
           >
             Logout
           </button>

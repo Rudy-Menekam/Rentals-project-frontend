@@ -29,23 +29,21 @@ button {
   color: white;
 }
 
-
 .container-bg {
   background-color: #087e9c50;
-  height:100%;
+  height: 100%;
   width: 100%;
   z-index: 100;
 }
 
 .wrapper-reservation {
-  background-color: #ffffff;
+  background-color: #fff;
   background-image: url(https://images.piaggio.com/vespa/vehicles/nvh2000u04/nvh2r7uu04/nvh2r7uu04-01-s.png);
   height: 100vh;
   width: 85vw;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  
 }
 
 .bookForm {

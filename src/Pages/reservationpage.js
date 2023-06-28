@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import BookingForm from '../components/BookingForm/BookingForm';
 import SmallSidebar from '../components/SmallSidebar/SmallSidebar';
