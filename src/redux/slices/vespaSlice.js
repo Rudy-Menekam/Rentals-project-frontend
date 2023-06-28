@@ -10,7 +10,12 @@ export const fetchVespas = createAsyncThunk(
   'vespas/fetchData',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${BASE_URL}/vespas`);
+      const token = getUserFromLocalStorage().user.token;
+      const response = await axios.get(`${BASE_URL}/vespas`, {
+        headers: {
+          Authorization: `${token}`,
+        },
+      });
       return response.data;
     } catch (err) {
       return rejectWithValue(await err.response.data);
@@ -22,7 +27,12 @@ export const fetchVespa = createAsyncThunk(
   'vespas/fetchVespa',
   async (id, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${BASE_URL}/vespas/${id}`);
+      const token = getUserFromLocalStorage().user.token;
+      const response = await axios.get(`${BASE_URL}/vespas/${id}`, {
+        headers: {
+          Authorization: `${token}`,
+        },
+      });
       return response.data;
     } catch (err) {
       return rejectWithValue(await err.response.data);
@@ -98,3 +108,4 @@ export const vespaSlice = createSlice({
 export const { removeVespa, addVespa, } = vespaSlice.actions;
 
 export default vespaSlice.reducer;
+
