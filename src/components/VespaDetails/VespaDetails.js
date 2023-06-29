@@ -23,7 +23,7 @@ const VespaDetails = (props) => {
   };
 
   return (
-    <div className="car-details-container d-flex w-100">
+    <div className="vespa-details-container d-flex w-100">
       <div className="d-flex flex-column w-100 justify-content-start align-items-center">
         <div className="img-container">
           <img
@@ -37,9 +37,9 @@ const VespaDetails = (props) => {
       <div className="d-flex flex-column justify-content-start align-items-center gap-4">
         <h2 className="d-flex align-items-center gap-2">
           {' '}
-          <Link to="/">
+          <Link to="/homepage">
             <button className="back-btn">
-              <BiLeftArrow fill="#97bf10" />
+              <BiLeftArrow fill="#2258A2" />
             </button>
           </Link>
           {singleVespa.name}

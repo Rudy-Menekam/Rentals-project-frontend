@@ -1,5 +1,5 @@
 /* eslint-disable */
-import React from 'react';
+// import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Slider.css';
 import 'swiper/css';
@@ -13,10 +13,24 @@ import {
 } from 'react-icons/ti';
 import { BsCardChecklist } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchVespas } from '../../redux/slices/vespaSlice';
 
 const Slider = (props) => {
-  const { vespas } = useSelector((state) => state.vespas);
+  const dispatch = useDispatch();
+  const vespas = useSelector((state) => state.vespas.vespas);
+  const loading = useSelector((state) => state.vespas.loading);
+
+  useEffect(() => {
+    dispatch(fetchVespas());
+  }, [dispatch]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div style={{ width: '100%', position: 'relative' }}>
       <div className="slider-title text-center">
@@ -59,14 +73,14 @@ const Slider = (props) => {
             <SwiperSlide key={vespa.id}>
               <Link to={`/detailsPage/${vespa.id}`} className="wrapper">
                 <div className="slide-container">
-                  <img className="car" src={vespa.photo} alt="car" />
+                  <img className="vespa" src={vespa.photo} alt="vespa" />
                 </div>
-                <div className="car-info text-center">
-                  <h3 className="car-title">{vespa.name}</h3>
-                  <p className="car-description">
+                <div className="vespa-info text-center">
+                  <h3 className="vespa-title">{vespa.name}</h3>
+                  <p className="vespa-description">
                     {vespa.description}
                     {' '}
-                    <span className="car-description">{vespa.model}</span>
+                    <span className="vespa-description">{vespa.model}</span>
                   </p>
 
                   <div className="slide-socials">

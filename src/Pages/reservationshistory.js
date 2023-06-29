@@ -1,15 +1,15 @@
 import React from 'react';
-import BookingForm from '../components/BookingForm/BookingForm';
 import SmallSidebar from '../components/SmallSidebar/SmallSidebar';
 import BigSidebar from '../components/BigSidebar/BigSidebar';
+import VespaHistory from '../components/VespaHistory/VespaHistory';
 
 // eslint-disable-next-line no-unused-vars
-const Reservationpage = (props) => (
+const Reservationshistory = (props) => (
   <div className="sliderwrapper">
     <SmallSidebar />
     <BigSidebar />
-    <BookingForm />
+    <VespaHistory />
   </div>
 );
 
-export default Reservationpage;
+export default Reservationshistory;

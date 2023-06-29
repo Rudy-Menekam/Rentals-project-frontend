@@ -2,8 +2,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LoginPage from './Pages/LoginPage';
 import store from './redux/store/store';
+import Homepage from './Pages/homepage';
+import Detailspage from './Pages/detailspage';
+import Reservationpage from './Pages/reservationpage';
+import Reservationshistory from './Pages/reservationshistory';
 import Reservation from './components/Reservation/Reservation';
-import MyReservations from './components/Reservation/MyReservations';
+import ProtectedRoute from './Pages/ProtectedRoute';
 
 function App() {
   return (
@@ -12,20 +16,44 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LoginPage />} />
-          </Routes>
-        </BrowserRouter>
-      </Provider>
-      <Provider store={store}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/bookvespa" element={<Reservation />} />
-          </Routes>
-        </BrowserRouter>
-      </Provider>
-      <Provider store={store}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/reservations" element={<MyReservations />} />
+            <Route
+              path="/homepage"
+              element={(
+                <ProtectedRoute>
+                  <Homepage />
+                </ProtectedRoute>
+            )}
+            />
+            <Route
+              path="/detailsPage/:id"
+              element={(
+                <ProtectedRoute>
+                  <Detailspage />
+                </ProtectedRoute>
+              )}
+            />
+            <Route
+              path="/addItem"
+              element={(
+                <ProtectedRoute>
+                  <Reservationpage />
+                </ProtectedRoute>
+              )}
+            />
+            <Route
+              path="/deleteItem"
+              element={
+                <Reservationshistory />
+              }
+            />
+            <Route
+              path="/bookride"
+              element={(
+                <ProtectedRoute>
+                  <Reservation />
+                </ProtectedRoute>
+            )}
+            />
           </Routes>
         </BrowserRouter>
       </Provider>
