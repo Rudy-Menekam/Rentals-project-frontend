@@ -1,140 +1,155 @@
 <a name="readme-top"></a>
 
-<div align="center">
-  <h3><b>Vespas Rental Frontend</b></h3>
-</div>
-<a name="readme-top"></a>
-
-<!-- TABLE OF CONTENTS -->
-
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Vespas Rental Frontend ](#-vespas-rental-frontend-)
-  - [Live Demo](#live-demo)
-  - [Desktop View](#desktop-view)
-  - [Mobile View](#mobile-view)
+- [🛵\[Booking Vespa API\] ](#about-project)
+  - [Database Structure](#erd)
+  - [📄\[Project Documentation\] ](#project-documentation)
   - [Kanban Board](#kanban-board)
-  - [Backend](#backend)
-  - [Contributors](#contributors)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
-  - [💻 Getting Started ](#-getting-started-)
-  - [To get a local copy up and running, follow these steps.](#to-get-a-local-copy-up-and-running-follow-these-steps)
+  - [🛠 Built With ](#built-with)
+  - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
-  - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+  - [👥 Authors ](#authors)
+  - [🔭 Future Features ](#future-features)
+  - [🤝 Contributing ](#contributing)
+  - [⭐️ Show your support ](#️support)
+  - [🙏 Acknowledgments ](#acknowledgements)
+  - [📝 License ](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Vespas Rental Frontend <a name="about-project"></a>
+# Booking Vespa 🛵 <a name="about-project"></a>
 
-> Vespa Rentals Frontend is a React app that serves as a front end to the Vespa Rentals project.
+This project is designed for the reservation of fancy vespas. If you are preparing for a special day or event and you want a cool Vespa for it, this website is the best place for you. If you have a luxurious Vespa and want to make some extra money from it, you can add it to our website and others will be able to reserve it!
 
-## Live Demo
+Here are some of the benefits of using our website:
 
-To see this project's live demo, please click [here]().
+- Wide selection of Vespas to choose from
 
-## Desktop View
+The main features of this website are:
 
-![screenshot]()
+- Users can see details of all the Vespas.
+- Users can reserve a Vespa for a special day.
+- Users can add their own Vespas and remove them if they want to.
 
-## Mobile View
+## Database Structure: <a name="erd"></a>
 
-![screenshot]()
-## Kanban Board
+<img src="https://github.com/MarkoKermi/rentals_project-back-end.git" width="650">
 
-To view the Kanban Board we built for this project please click [here](https://github.com/users/Rudy-Menekam/projects/3).
+## Project Documentation 📄 <a name="project-documentation"></a>
 
-To view the issue with the Kanban Board screenshots please click [here](https://github.com/Rudy-Menekam/Rentals-project-frontend/issues/14).
+- Front-end GitHub repository [link](https://github.com/Rudy-Menekam/Rentals-project-frontend.git)👈
+- Back-end API [link](https://github.com/MarkoKermi/rentals_project-back-end.git) 👈
 
-## Backend
+## Kanban Board <a name="kanban-board"></a>
 
-Api documentation can be found [here]()
+### Kanban Board [link](https://github.com/users/Rudy-Menekam/projects/3)
 
-Api live demo can be found [here]()
+### Initial state of the Kanban Board:
 
-## Contributors
+![image](https://drive.google.com/file/d/1s9aL1XscWvnGP3t9KD-jaKd5wOis7dVM/view?usp=drive_link)
 
-There were initially 4 contributors to this project, you can see their contact information in the Authors section of this document.
+### Final state of the Kanban Board:
 
-## 🛠 Built With <a name="built-with"></a>
+![image](https://drive.google.com/file/d/1H7apABiT-PzcKlLqTZFlk7d5OGW8FGCB/view?usp=drive_link)
 
-This app is build with React and Redux.
-
-### Tech Stack <a name="tech-stack"></a>
-
-> <li><a href="https://reactjs.org/">React</a></li>
-> <li><a href="https://redux.js.org/">Redux</a></li>
-
-### Key Features <a name="key-features"></a>
-
-> - The login page where the user logs in to the website.
-> - The home page where the user can see a list of vespas and click on any vespa to display the details of that vespa.
-> - The details page is where the user can click on the "Reserve" button to reserve the vespa.
-> - The user can see a list of their reservations.
-> - The user can add a new vespa.
-> - The user can click on the delete button from the naviagtion panel and see a list of all vespas with the vespa name and a "delete" button and then delete a particular vespa.
-> - The deleted vespas are removed from the home page.
+### Team members: 3 (Marko Kermichiev, Mohi Minul Islam Yash, Menekam Rudy)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+ 
+## Built With 🛠️ <a name="built-with"></a>
 
-<!-- GETTING STARTED -->
+- Programming Languages: Ruby, SQL.
+- Framework: Ruby on Rails.
+- Database: PostgreSQL.
+- Code Editor: VS Code.
 
-## 💻 Getting Started <a name="getting-started"></a>
+## Getting Started <a name="getting-started"></a>
 
-## To get a local copy up and running, follow these steps.
+To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-In order to run this project you need:
+- A web browser like Google Chrome.
+- A code editor like Visual Studio Code with Git and Ruby.
 
-- Mac or PC
-- Install node.js
-- Use npm as package manager.
-- Understanding of React and Redux
+> You can check if Git is installed by running the following command in the terminal.
+
+```
+$ git --version
+```
+
+> Likewise for Ruby installation.
+
+```
+$ ruby --version && irb
+```
+
+To install rails, in the terminal kindly run this command:
+
+```
+$ gem install rails
+```
 
 ### Setup
 
-- Clone this repository to your desired folder:
-
-```sh
- git clone https://github.com/Rudy-Menekam/Rentals-project-frontend.git
-```
-
-- Navigate into the cloned folder
-
-```sh
- cd Rentals-project-frontend
-
-```
+Clone the repository using the GitHub link provided below.
 
 ### Install
 
-- Install this project with:
+In the terminal, go to your file directory and run this command.
 
-```sh
- npm install
+```
+$ git clone https://github.com/Rudy-Menekam/Rentals-project-frontend.git
 ```
 
-- Start the server
+### Usage
 
-```sh
- npm start
+Kindly modify the files as needed.
+
+### Run locally
+
+Make your way to the correct directory by running this command:
+
+```
+$ cd Program-Capstone
+```
+
+Install the required dependencies to run the project with this command:
+
+```
+$ bundle install
+```
+
+Setup the database, run:
+
+```
+$ rails db:create
+$ rails db:migrate
+```
+
+Then run it in your browser with this command:
+
+```
+$ rails server
+```
+
+### Run tests
+
+To run tests, please run this command:
+
+```
+$ rspec
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="author"></a>
 
 👤 **Marko Kermichiev**
 
@@ -142,58 +157,40 @@ In order to run this project you need:
 - Twitter: [@MarkoKerm](https://twitter.com/MarkoKerm)
 - LinkedIn: [Marko Kermichiev](https://www.linkedin.com/in/marko-kermichiev/)
 
-👤 **Yash**
+👤 **Mohi Minul Islam Yash**
 
-- GitHub: [Yash](https://github.com/yash244466666)
-- LinkedIn: [Yash Solo](https://www.linkedin.com/in/yash-solo)
-- Twitter: [Yash Solo](https://twitter.com/yash_solo000)
+- GitHub: [yash244466666](https://github.com/yash244466666)
+- Twitter: [@yash_solo000](https://twitter.com/yash_solo000)
 
-👤 **Rudy Menekam**
+👤 **Menekam Rudy**
 
-- GitHub: [@githubhandle](https://github.com/Rudy-Menekam)
-- Twitter: [@twitterhandle](https://twitter.com/MenekamR)
-- LinkedIn: [linkedIn](https://www.linkedin.com/in/menekam-rudy/)
+- GitHub: [Rudy-Menekam](https://github.com/Rudy-Menekam)
+- Twitter: [@MenekamR](https://twitter.com/MenekamR)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+## 🚀 Future Features <a name="future-features"></a>
 
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ] **Allow users to choose a language for the application**
-- [ ] **Add payment option**
-- [ ] **Some UX improvements: include transitions and/or animations, etc.**
+- We'd implement a robust Role Based Access Control feature.
+- We'd integrate a rating feature to allow users give ratings to Vespas booked.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Rudy-Menekam/Rentals-project-frontend/issues).
+Feel free to check the [issues page](https://github.com/MarkoKermi/rentals_project-back-end/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
+## Show your support <a name="️support"></a>
 
-## ⭐️ Show your support <a name="support"></a>
+Give a ⭐️ if you like this project!
 
-If you like this project, please leave a ⭐️
+## Acknowledgments
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-- We would like to thank Microverse for providing the reading materials that aided us to during the project development.
-- We would like to give Credit to 🙏 Murat Korkmaz the author of the original Vespa- Responsive Redesign, as required by the Creative Commons License.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
+- [Microverse](https://www.microverse.org/)
 
 ## 📝 License <a name="license"></a>
 
