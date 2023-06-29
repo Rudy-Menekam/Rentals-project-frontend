@@ -50,6 +50,7 @@ button {
   background: #0f323bc0;
   padding: 36px;
   margin-top: 10vh;
+  margin-left: 26vh;
   position: absolute;
 }
 
@@ -75,4 +76,33 @@ button {
 
 .wrapper-my-reservation {
   width: 100%;
+}
+
+.header-text {
+  background: #2258a2;
+}
+
+@media screen and (max-width: 767px) {
+  .select-container input {
+    padding: 8px;
+    width: 20.5vh;
+  }
+
+  .bookForm {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .container {
+    margin-top: 95px;
+  }
+
+  .header-book button {
+    width: 50%;
+  }
+
+  .select-car {
+    width: auto;
+  }
 }

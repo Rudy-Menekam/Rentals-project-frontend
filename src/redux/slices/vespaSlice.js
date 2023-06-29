@@ -1,7 +1,5 @@
-/* eslint-disable */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { upload } from '@testing-library/user-event/dist/upload';
 import { getUserFromLocalStorage } from '../../helpers/LocalStorage';
 
 export const BASE_URL = 'http://127.0.0.1:3000/api/v1';
@@ -10,7 +8,7 @@ export const fetchVespas = createAsyncThunk(
   'vespas/fetchData',
   async (_, { rejectWithValue }) => {
     try {
-      const token = getUserFromLocalStorage().user.token;
+      const { token } = getUserFromLocalStorage().user;
       const response = await axios.get(`${BASE_URL}/vespas`, {
         headers: {
           Authorization: `${token}`,
@@ -27,7 +25,7 @@ export const fetchVespa = createAsyncThunk(
   'vespas/fetchVespa',
   async (id, { rejectWithValue }) => {
     try {
-      const token = getUserFromLocalStorage().user.token;
+      const { token } = getUserFromLocalStorage().user;
       const response = await axios.get(`${BASE_URL}/vespas/${id}`, {
         headers: {
           Authorization: `${token}`,
@@ -44,7 +42,7 @@ export const deleteVespa = createAsyncThunk(
   'vespas/deleteVespa',
   async (id, { rejectWithValue }) => {
     try {
-      const token = getUserFromLocalStorage().user.token;
+      const { token } = getUserFromLocalStorage().user;
       const response = await axios.delete(`${BASE_URL}/vespas/${id}`, {
         headers: {
           Authorization: `${token}`,
@@ -61,7 +59,7 @@ export const createNewVespa = createAsyncThunk(
   'vespas/createNewVespa',
   async (vespaData, { rejectWithValue }) => {
     try {
-      const token = getUserFromLocalStorage().user.token;
+      const { token } = getUserFromLocalStorage().user;
       const response = await axios.post(`${BASE_URL}/vespas`, vespaData, {
         headers: {
           Authorization: `${token}`,
@@ -76,7 +74,7 @@ export const createNewVespa = createAsyncThunk(
 
 const initialState = {
   vespas: [],
-  singleVespa: {}
+  singleVespa: {},
 };
 
 export const vespaSlice = createSlice({
@@ -87,7 +85,7 @@ export const vespaSlice = createSlice({
       state.vespas.push(action.payload);
     },
     removeVespa: (state, action) => {
-      const filteredVespas = state.vespas.filter((vespa) => vespa.id != action.payload);
+      const filteredVespas = state.vespas.filter((vespa) => vespa.id !== action.payload);
       state.vespas = filteredVespas;
     },
   },
@@ -105,7 +103,6 @@ export const vespaSlice = createSlice({
   },
 });
 
-export const { removeVespa, addVespa, } = vespaSlice.actions;
+export const { removeVespa, addVespa } = vespaSlice.actions;
 
 export default vespaSlice.reducer;
-

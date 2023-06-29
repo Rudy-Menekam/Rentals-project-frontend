@@ -75,77 +75,42 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-- A web browser like Google Chrome.
-- A code editor like Visual Studio Code with Git and Ruby.
+In order to run this project you need:
 
-> You can check if Git is installed by running the following command in the terminal.
-
-```
-$ git --version
-```
-
-> Likewise for Ruby installation.
-
-```
-$ ruby --version && irb
-```
-
-To install rails, in the terminal kindly run this command:
-
-```
-$ gem install rails
-```
+- Mac or PC
+- Install node.js
+- Use npm as package manager.
+- Understanding of React and Redux
 
 ### Setup
 
-Clone the repository using the GitHub link provided below.
+- Clone this repository to your desired folder:
+
+```sh
+ git clone https://github.com/Rudy-Menekam/Rentals-project-frontend.git
+```
+
+- Navigate into the cloned folder
+
+```sh
+ cd Rentals-project-frontend
+
+```
 
 ### Install
 
-In the terminal, go to your file directory and run this command.
+- Install this project with:
 
-```
-$ git clone https://github.com/Rudy-Menekam/Rentals-project-frontend.git
-```
-
-### Usage
-
-Kindly modify the files as needed.
-
-### Run locally
-
-Make your way to the correct directory by running this command:
-
-```
-$ cd Program-Capstone
+```sh
+ npm install
 ```
 
-Install the required dependencies to run the project with this command:
+- Start the server
 
-```
-$ bundle install
-```
-
-Setup the database, run:
-
-```
-$ rails db:create
-$ rails db:migrate
+```sh
+ npm start
 ```
 
-Then run it in your browser with this command:
-
-```
-$ rails server
-```
-
-### Run tests
-
-To run tests, please run this command:
-
-```
-$ rspec
-```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

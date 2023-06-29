@@ -58,23 +58,6 @@ export const fetchReservations = createAsyncThunk(
 
 export const deleteReservation = createAsyncThunk(
   'vespas/deleteReservation',
-  // async (id, { rejectWithValue, getState }) => {
-  //   try {
-  //     const token = getUserFromLocalStorage().token.user;
-  //     await axios.delete(`${BASE_URL}/reservations/${id}`, {
-  //       headers: {
-  //         Authorization: `${token}`,
-  //       },
-  //     });
-  //     const state = getState();
-  //     const filteredReservations = state.vespas.reservations.filter(
-  //       (reservation) => reservation.id !== id,
-  //     );
-  //     return filteredReservations;
-  //   } catch (err) {
-  //     return rejectWithValue(await err.response.data);
-  //   }
-  // },
   async (id, { rejectWithValue }) => {
     try {
       const { token } = getUserFromLocalStorage().user;

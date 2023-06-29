@@ -62,7 +62,7 @@ const Reservation = () => {
         <BigSidebar />
         <SmallSidebar />
         <div className="wrapper-reservation">
-          <div className="container w-50 ">
+          <div className="container ">
             {fieldError && (
               <p className="error-message alert alert-danger mt-2">
                 Please fill in the following required fields:

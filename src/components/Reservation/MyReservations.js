@@ -27,7 +27,7 @@ const MyReservations = () => {
         <BigSidebar />
         <SmallSidebar />
         <div className="wrapper-reservation ">
-          <h2 className="text-white text-center my-3 h1 bg-dark p-2 mt-5">
+          <h2 className="header-text text-white text-center my-3 h1 p-2 mt-5">
             My Reservations
           </h2>
           <div className="row justify-content-center p-3">
