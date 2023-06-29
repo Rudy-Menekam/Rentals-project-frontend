@@ -39,7 +39,7 @@ const VespaDetails = (props) => {
           {' '}
           <Link to="/homepage">
             <button className="back-btn">
-              <BiLeftArrow fill="#087f9c" />
+              <BiLeftArrow fill="#2258A2" />
             </button>
           </Link>
           {singleVespa.name}

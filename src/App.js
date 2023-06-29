@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import LoginPage from './Pages/LoginPage';
@@ -18,25 +17,29 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<LoginPage />} />
-            <Route path="/homepage" element={
-              <ProtectedRoute>
-                <Homepage />
-              </ProtectedRoute>} />
+            <Route
+              path="/homepage"
+              element={(
+                <ProtectedRoute>
+                  <Homepage />
+                </ProtectedRoute>
+            )}
+            />
             <Route
               path="/detailsPage/:id"
-              element={
+              element={(
                 <ProtectedRoute>
                   <Detailspage />
                 </ProtectedRoute>
-              }
+              )}
             />
             <Route
               path="/addItem"
-              element={
+              element={(
                 <ProtectedRoute>
                   <Reservationpage />
                 </ProtectedRoute>
-              }
+              )}
             />
             <Route
               path="/deleteItem"
@@ -44,11 +47,14 @@ function App() {
                 <Reservationshistory />
               }
             />
-            <Route path="/bookride" element={
-              <ProtectedRoute>
-                <Reservation />
-              </ProtectedRoute>
-            } />
+            <Route
+              path="/bookride"
+              element={(
+                <ProtectedRoute>
+                  <Reservation />
+                </ProtectedRoute>
+            )}
+            />
             <Route
               path="/myreservations"
               element={(

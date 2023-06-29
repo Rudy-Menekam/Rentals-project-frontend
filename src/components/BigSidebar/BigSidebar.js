@@ -1,16 +1,15 @@
-/* eslint-disable */
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
-import Wrapper from '../../assets/Wrappers/BigSidebar';
-import NavLinks from '../Navlinks/NavLinks';
-import Logo from '../../assets/logo.png';
 import { BsTwitter } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
 import { TfiGoogle } from 'react-icons/tfi';
 import { FaPinterestP } from 'react-icons/fa';
+import Logo from '../../assets/logo.png';
+import NavLinks from '../Navlinks/NavLinks';
+import Wrapper from '../../assets/Wrappers/BigSidebar';
 import { logoutUser } from '../../redux/slices/userSlice';
-import './BigSidebar.css'
+import './BigSidebar.css';
 
 const BigSidebar = () => {
   const dispatch = useDispatch();
@@ -25,14 +24,14 @@ const BigSidebar = () => {
     <Wrapper>
       <div className="show-sidebar">
         <div className="content">
-          <header className='header'>
-            <img className='logo-img' src={Logo} alt="logo" />
+          <header className="header">
+            <img className="logo-img" src={Logo} alt="logo" />
           </header>
           <NavLinks />
           <button
             type="button"
             onClick={handleLogout}
-            className=" ms-3 btn btn-outline-danger px-3 w-50 mt-3"
+            className=" ms-3 btn btn-outline-danger px-3 w-50 mt-3 logoutBtn"
           >
             Logout
           </button>

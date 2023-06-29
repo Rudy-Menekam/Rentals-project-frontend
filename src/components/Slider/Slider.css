@@ -35,7 +35,7 @@
   cursor: pointer;
   width: 30px;
   height: 30px;
-  background-color: #087f9c;
+  background-color: #2258a2;
 }
 
 .slider-btns {
@@ -79,13 +79,13 @@
 }
 
 .vespa-description {
-  color: thistle;
+  color: rgb(97, 90, 97);
   width: 25rem;
   font-size: 16px;
 }
 
 span {
-  color: thistle;
+  color: black;
 }
 
 .slide-container {
