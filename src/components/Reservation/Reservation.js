@@ -1,9 +1,9 @@
-/* eslint-disable */
 import './Reservation.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createReservation } from '../../redux/slices/reservationSlice';
+import { fetchVespas } from '../../redux/slices/vespaSlice';
 import DateRange from '../DatePicker/DatePicker';
 import SmallSidebar from '../SmallSidebar/SmallSidebar';
 import BigSidebar from '../BigSidebar/BigSidebar';
@@ -11,38 +11,27 @@ import BigSidebar from '../BigSidebar/BigSidebar';
 const Reservation = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // const { vespas } = useSelector(vespas);
-  const { vespas } = useSelector((state) => state.vespas);
   const [selectedStartDate, setSelectedStartDate] = useState(new Date());
   const [selectedEndDate, setSelectedEndDate] = useState(new Date());
   const [selectedCity, setSelectedCity] = useState('');
   const [fieldError, setFieldError] = useState(false);
-  // const location = useLocation();
-  // const searchParams = new URLSearchParams(location.search);
-  // const initialVespaId = searchParams.get('vespaId');
-  // const pickUpDate = new Date(2023, 5, 13); // Month is 0-based (0: January, 1: February, etc.)
-  // const returnDate = new Date(2023, 5, 29); // Month is 0-based (0: January, 1: February, etc.)
-  // const [reservationData, setReservationData] = useState({
-  //   city: 'london',
-  //   pick_up_date: pickUpDate.toISOString(), // Convert date to string format accepted by the API
-  //   return_date: returnDate.toISOString(), // Convert date to string format accepted by the API
-  //   vespa_id: initialVespaId ? parseInt(initialVespaId, 10) : null,
-  // });
   const [reservationData, setReservationData] = useState({
-    pick_up_date: '',
-    end_date: '',
-    city: '',
     vespa_id: '',
+    pick_up_date: selectedStartDate.toISOString(),
+    return_date: selectedEndDate.toISOString(),
+    city: selectedCity,
     user_id: 1,
   });
 
+  const vespas = useSelector((state) => state.vespas.vespas) || [];
+
+  useEffect(() => {
+    dispatch(fetchVespas());
+  }, [dispatch]);
+
   const handleReservation = () => {
-    // Check if any required field is empty
-    if (
-      !reservationData.vespa_id
-      || !selectedStartDate
-      || !selectedEndDate
-      || !selectedCity
+    if (reservationData.start_date && reservationData.end_date
+      && reservationData.city && reservationData.vespa_id
     ) {
       setFieldError(true);
       setTimeout(() => {
@@ -50,13 +39,10 @@ const Reservation = () => {
       }, 3000);
       return;
     }
-    // Find the selected car based on its id
     const selectedVespa = vespas.find(
       (vespa) => vespa.id === parseInt(reservationData.vespa_id, 10),
     );
-
     if (selectedVespa) {
-      // Update the car_id with the actual car_id value
       const vespaId = selectedVespa.id;
       const updatedReservationData = {
         ...reservationData,
@@ -73,11 +59,10 @@ const Reservation = () => {
   return (
     <>
       <div className="sliderwrapper">
-      <BigSidebar />
-      <SmallSidebar />
-      <div className="container-bg"> 
+        <BigSidebar />
+        <SmallSidebar />
         <div className="wrapper-reservation">
-          <div className="container w-50 justify-content-center align-items-center ">
+          <div className="container w-50 ">
             {fieldError && (
               <p className="error-message alert alert-danger mt-2">
                 Please fill in the following required fields:
@@ -103,13 +88,11 @@ const Reservation = () => {
                 )}
               </p>
             )}
-            <div className="d-flex flex-column gap-2 justify-content-center align-items-center bookForm-cnt">
 
+            <h1 className="header-book">Book a Vespa</h1>
+            <hr className="horizontal-line" />
             <div className="bookForm">
               <div className="input-from">
-              <h1 className="header-book">Book a Vespa</h1>
-              <hr className="horizontal-line" />
-                <h3 className="header-book">Select Dates</h3>
                 <DateRange
                   selectedStartDate={selectedStartDate}
                   selectedEndDate={selectedEndDate}
@@ -118,35 +101,18 @@ const Reservation = () => {
                 />
                 <div className="select-container">
                   <select
+                    className="select-car"
                     value={reservationData.vespa_id}
                     onChange={(e) => setReservationData({
                       ...reservationData,
                       vespa_id: e.target.value,
                     })}
                   >
-                    <option value="">Select a Vespa</option>
+                    <option value="">Select a vespa</option>
                     {vespas.map((vespa) => (
                       <option key={vespa.id} value={vespa.id}>{vespa.name}</option>
                     ))}
                   </select>
-                  {/* <select
-                    className="select-car"
-                    defaultValue={reservationData.vespa_id || initialVespaId}
-                    onChange={(e) => setReservationData({
-                      ...reservationData,
-                      vespa_id: e.target.value,
-                    })}
-                  >
-                    <option value=" ">
-                      Select A Vespa
-                    </option>
-                    {vespas.map((vespa) => (
-                      <option key={vespa.id} value={vespa.id}>
-                        {vespa.name}
-                      </option>
-                    ))}
-                  </select> */}
-
                   <select
                     className="select-car"
                     value={selectedCity}
@@ -171,14 +137,11 @@ const Reservation = () => {
                   Book Now
                 </button>
               </div>
-              </div>
             </div>
           </div>
-        </div>
         </div>
       </div>
     </>
   );
 };
-
 export default Reservation;

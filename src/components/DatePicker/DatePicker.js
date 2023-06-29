@@ -9,20 +9,27 @@ export default function DateRange() {
 
   return (
     <div className="select-container">
-      <DatePicker
-        selectsStart
-        selected={startDate}
-        onChange={(date) => setStartDate(date)}
-        startDate={startDate}
-      />
-      <DatePicker
-        selectsEnd
-        selected={endDate}
-        onChange={(date) => setEndDate(date)}
-        endDate={endDate}
-        startDate={startDate}
-        minDate={startDate}
-      />
+      <div>
+        <p>Start Date</p>
+        <DatePicker
+          selectsStart
+          selected={startDate}
+          onChange={(date) => setStartDate(date)}
+          startDate={startDate}
+        />
+      </div>
+      <div>
+        <p>Start Date</p>
+        <DatePicker
+          selectsEnd
+          selected={endDate}
+          onChange={(date) => setEndDate(date)}
+          endDate={endDate}
+          startDate={startDate}
+          minDate={startDate}
+        />
+      </div>
+
     </div>
   );
 }

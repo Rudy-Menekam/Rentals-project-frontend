@@ -8,6 +8,7 @@ import Reservationpage from './Pages/reservationpage';
 import Reservationshistory from './Pages/reservationshistory';
 import Reservation from './components/Reservation/Reservation';
 import ProtectedRoute from './Pages/ProtectedRoute';
+import MyReservations from './components/Reservation/MyReservations';
 
 function App() {
   return (
@@ -53,6 +54,14 @@ function App() {
                   <Reservation />
                 </ProtectedRoute>
             )}
+            />
+            <Route
+              path="/myreservations"
+              element={(
+                <ProtectedRoute>
+                  <MyReservations />
+                </ProtectedRoute>
+              )}
             />
           </Routes>
         </BrowserRouter>

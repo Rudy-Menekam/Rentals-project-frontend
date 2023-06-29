@@ -13,7 +13,7 @@
 .select-car {
   padding: 10px;
   padding-left: 10px;
-  width: 200px;
+  width: 100%;
 }
 
 .select-container input {
@@ -37,10 +37,10 @@ button {
 }
 
 .wrapper-reservation {
-  background-color: #fff;
+  background-color: whitesmoke;
   background-image: url(https://images.piaggio.com/vespa/vehicles/nvh2000u04/nvh2r7uu04/nvh2r7uu04-01-s.png);
+  width: 100%;
   height: 100vh;
-  width: 85vw;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -50,12 +50,11 @@ button {
   background: #0f323bc0;
   padding: 36px;
   margin-top: 10vh;
-  width: 50%;
   position: absolute;
 }
 
 .horizontal-line {
-  border: 1px solid #fff;
+  border: 1px solid #000;
   width: 100%;
 }
 
@@ -63,7 +62,6 @@ button {
   color: #f0f0f0;
   width: 100%;
   padding: 10px;
-  margin-top: 50vh;
   border-radius: 5px;
   border: none;
 }
@@ -73,4 +71,8 @@ button {
   border: none;
   width: 100%;
   color: #fff;
+}
+
+.wrapper-my-reservation {
+  width: 100%;
 }
