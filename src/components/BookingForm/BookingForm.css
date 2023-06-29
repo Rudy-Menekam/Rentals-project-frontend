@@ -1,0 +1,61 @@
+.vespaAddInput {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-size: 20px;
+  background-position: 95%;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.vespaAddBtn {
+  width: 25%;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-size: 20px;
+  background-position: 95%;
+  cursor: pointer;
+  outline: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #2258a2;
+  color: white;
+}
+
+.vespaAddDiv {
+  margin-top: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .vespaAddDiv {
+    margin-top: 30%;
+  }
+
+  .vespaAddBtn {
+    width: 80%;
+  }
+}

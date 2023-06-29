@@ -1,0 +1,108 @@
+.header-book {
+  display: flex;
+  justify-content: center;
+}
+
+.select-container {
+  justify-content: center;
+  display: flex;
+  gap: 22px;
+  margin: 23px;
+}
+
+.select-car {
+  padding: 10px;
+  padding-left: 10px;
+  width: 100%;
+}
+
+.select-container input {
+  padding: 10px;
+}
+
+button {
+  padding: 16px;
+  width: 20%;
+  font-size: 14px;
+  background-color: #165666;
+  border: 1px solid #165666;
+  color: white;
+}
+
+.container-bg {
+  background-color: #087e9c50;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.wrapper-reservation {
+  background-color: whitesmoke;
+  background-image: url(https://images.piaggio.com/vespa/vehicles/nvh2000u04/nvh2r7uu04/nvh2r7uu04-01-s.png);
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.bookForm {
+  background: #0f323bc0;
+  padding: 36px;
+  margin-top: 10vh;
+  margin-left: 26vh;
+  position: absolute;
+}
+
+.horizontal-line {
+  border: 1px solid #000;
+  width: 100%;
+}
+
+.input-from {
+  color: #f0f0f0;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn {
+  background-color: #087f9c;
+  border: none;
+  width: 100%;
+  color: #fff;
+}
+
+.wrapper-my-reservation {
+  width: 100%;
+}
+
+.header-text {
+  background: #2258a2;
+}
+
+@media screen and (max-width: 767px) {
+  .select-container input {
+    padding: 8px;
+    width: 20.5vh;
+  }
+
+  .bookForm {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .container {
+    margin-top: 95px;
+  }
+
+  .header-book button {
+    width: 50%;
+  }
+
+  .select-car {
+    width: auto;
+  }
+}
