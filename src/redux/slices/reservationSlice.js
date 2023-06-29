@@ -58,19 +58,32 @@ export const fetchReservations = createAsyncThunk(
 
 export const deleteReservation = createAsyncThunk(
   'vespas/deleteReservation',
-  async (id, { rejectWithValue, getState }) => {
+  // async (id, { rejectWithValue, getState }) => {
+  //   try {
+  //     const token = getUserFromLocalStorage().token.user;
+  //     await axios.delete(`${BASE_URL}/reservations/${id}`, {
+  //       headers: {
+  //         Authorization: `${token}`,
+  //       },
+  //     });
+  //     const state = getState();
+  //     const filteredReservations = state.vespas.reservations.filter(
+  //       (reservation) => reservation.id !== id,
+  //     );
+  //     return filteredReservations;
+  //   } catch (err) {
+  //     return rejectWithValue(await err.response.data);
+  //   }
+  // },
+  async (id, { rejectWithValue }) => {
     try {
-      const token = getUserFromLocalStorage().token.user;
-      await axios.delete(`${BASE_URL}/reservations/${id}`, {
+      const { token } = getUserFromLocalStorage().user;
+      const response = await axios.delete(`${BASE_URL}/reservations/${id}`, {
         headers: {
           Authorization: `${token}`,
         },
       });
-      const state = getState();
-      const filteredReservations = state.vespas.reservations.filter(
-        (reservation) => reservation.id !== id,
-      );
-      return filteredReservations;
+      return response.data;
     } catch (err) {
       return rejectWithValue(await err.response.data);
     }
@@ -89,6 +102,11 @@ export const reservationSlice = createSlice({
     addReservation: (state, action) => {
       state.reservations.push(action.payload);
     },
+    removeReservation: (state, action) => {
+      // eslint-disable-next-line max-len
+      const filteredReservations = state.reservations.filter((reservation) => reservation.id !== action.payload);
+      state.reservations = filteredReservations;
+    },
   },
   extraReducers: {
     [fetchVespa.fulfilled]: (state, action) => {
@@ -102,10 +120,12 @@ export const reservationSlice = createSlice({
       state.reservations = action.payload;
     },
     [deleteReservation.fulfilled]: (state, action) => {
-      state.reservations = action.payload;
+      const deleteReservationId = action.payload;
+      // eslint-disable-next-line max-len
+      state.reservations = state.reservations.filter((reservation) => reservation.id !== deleteReservationId);
     },
   },
 });
 
-export const { addReservation } = reservationSlice.actions;
+export const { removeReservation, addReservation } = reservationSlice.actions;
 export default reservationSlice.reducer;

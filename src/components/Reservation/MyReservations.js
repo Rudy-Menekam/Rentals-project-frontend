@@ -1,7 +1,7 @@
 import './Reservation.css';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchReservations, deleteReservation } from '../../redux/slices/reservationSlice';
+import { fetchReservations, deleteReservation, removeReservation } from '../../redux/slices/reservationSlice';
 import SmallSidebar from '../SmallSidebar/SmallSidebar';
 import BigSidebar from '../BigSidebar/BigSidebar';
 
@@ -13,7 +13,12 @@ const MyReservations = () => {
   }, [dispatch]);
 
   const handleDelete = (id) => {
-    dispatch(deleteReservation(id));
+    // eslint-disable-next-line no-alert
+    const confirmDelete = window.confirm('Are you sure you want to delete this Reservation?');
+    if (confirmDelete) {
+      dispatch(removeReservation(id));
+      dispatch(deleteReservation(id));
+    }
   };
 
   return (
