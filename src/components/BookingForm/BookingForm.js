@@ -1,6 +1,9 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createNewVespa, fetchVespas } from '../../redux/slices/vespaSlice';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const BookingForm = () => {
   const dispatch = useDispatch();

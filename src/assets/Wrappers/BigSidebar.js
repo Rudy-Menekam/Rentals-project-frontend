@@ -33,7 +33,7 @@ const Wrapper = styled.aside`
     .nav-link {
       display: flex;
       align-items: center;
-      color: #121212;
+      color: #0f323b;
       padding: 1rem;
       font-size: 1.75rem;
       text-decoration: none;
@@ -42,11 +42,11 @@ const Wrapper = styled.aside`
     }
     .nav-link:hover,
     .logout-btn:hover {
-      color: blue;
+      // color: blue;
     }
 
     .active {
-      background-color: #96bf01;
+      background-color: #0f323b;
       border-radius: 0.5rem;
       color: #fff;
     }

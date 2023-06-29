@@ -5,7 +5,7 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { FiSettings } from 'react-icons/fi';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { BiLeftArrow } from 'react-icons/bi';
-// import './VespaDetails.css';
+import './VespaDetails.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchVespa } from '../../redux/slices/vespaSlice';
 
@@ -37,9 +37,9 @@ const VespaDetails = (props) => {
       <div className="d-flex flex-column justify-content-start align-items-center gap-4">
         <h2 className="d-flex align-items-center gap-2">
           {' '}
-          <Link to="/">
+          <Link to="/homepage">
             <button className="back-btn">
-              <BiLeftArrow fill="#97bf10" />
+              <BiLeftArrow fill="#087f9c" />
             </button>
           </Link>
           {singleVespa.name}

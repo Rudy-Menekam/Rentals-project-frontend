@@ -1,16 +1,15 @@
+import './Reservation.css';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { fetchReservations, deleteReservation } from '../../redux/slices/reservationSlice';
 import SmallSidebar from '../SmallSidebar/SmallSidebar';
 import BigSidebar from '../BigSidebar/BigSidebar';
-import { deleteReservation } from '../../redux/slices/vespaSlice';
-import { getReservations } from '../../redux/slices/reservationSlice';
 
 const MyReservations = () => {
   const dispatch = useDispatch();
-  const reservations = useSelector((state) => state.vespas.reservations);
-
+  const reservations = useSelector((state) => state.reservations.reservations);
   useEffect(() => {
-    dispatch(getReservations());
+    dispatch(fetchReservations());
   }, [dispatch]);
 
   const handleDelete = (id) => {
@@ -20,9 +19,9 @@ const MyReservations = () => {
   return (
     <>
       <div className="sliderwrapper">
-        <SmallSidebar />
         <BigSidebar />
-        <div className="wrapper-my-reservation background-tint overflow-auto">
+        <SmallSidebar />
+        <div className="wrapper-reservation ">
           <h2 className="text-white text-center my-3 h1 bg-dark p-2 mt-5">
             My Reservations
           </h2>
