@@ -4,7 +4,7 @@ import {
   getUserFromLocalStorage,
 } from '../../helpers/LocalStorage';
 
-export const BASE_URL = 'http://localhost:3000/api/v1/';
+export const BASE_URL = 'https://vespa-rentals.onrender.com/api/v1';
 
 export const fetchVespa = createAsyncThunk(
   'vespas/fetchVespa',
