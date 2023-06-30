@@ -5,6 +5,7 @@
 - [📗 Table of Contents](#-table-of-contents)
 - [🛵\[Booking Vespa API\] ](#about-project)
   - [Database Structure](#erd)
+  - [Live Demo](#Live-Demo)
   - [📄\[Project Documentation\] ](#project-documentation)
   - [Kanban Board](#kanban-board)
   - [🛠 Built With ](#built-with)
@@ -36,6 +37,12 @@ The main features of this website are:
 - Users can see details of all the Vespas.
 - Users can reserve a Vespa for a special day.
 - Users can add their own Vespas and remove them if they want to.
+
+
+## Live Demo
+
+To see this project's live demo, please click [here](https://vespa-rentals-msq2.onrender.com/).
+
 
 ## Database Structure: <a name="erd"></a>
 
