@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d08b4799.css",
+    "main.js": "/static/js/main.858a3bc3.js",
+    "static/js/787.c9d6930f.chunk.js": "/static/js/787.c9d6930f.chunk.js",
+    "static/media/logo.png": "/static/media/logo.905ec096fd0d342d71a8.png",
+    "static/media/vespa_v1.png": "/static/media/vespa_v1.ff0ab25d327465747004.png",
+    "index.html": "/index.html",
+    "main.d08b4799.css.map": "/static/css/main.d08b4799.css.map",
+    "main.858a3bc3.js.map": "/static/js/main.858a3bc3.js.map",
+    "787.c9d6930f.chunk.js.map": "/static/js/787.c9d6930f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d08b4799.css",
+    "static/js/main.858a3bc3.js"
+  ]
+}
